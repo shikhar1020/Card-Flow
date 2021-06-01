@@ -1,17 +1,19 @@
 .cardLayout{
     padding: 3.5rem 0;
+    background-color: #C2E1F7;
     /* border: 3px solid green; */
     text-align: center;
 }
 
 .formPayment{
+    padding: 0 1rem;
     border : 2px solid white;
     background-color: white;
-    width: 30%;
+    width: 25%;
     margin: 0 auto;
     margin-top: -6rem;
     /* width:45rem; */
-    height: 28rem;
+    height: 26rem;
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -20,16 +22,20 @@
 }
 
 form {
-    background-color: #fff;
+    background-color: white;
     width: 100%;
     padding: 10px;
     padding-top: 7rem;
+    /* border: 2px solid green; */
 }
 
 .lastRow{
+    margin-top:5px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: white;
+    /* border:3px solid green; */
 }
 
 input, label {
@@ -70,15 +76,19 @@ input:focus {
 
   input[type=submit] {
     background-color: #008CBA;
-    border: none;
+    /* border: none; */
+    /* border:2px solid yellow; */
+    line-height:1px;
     color: white;
-    padding: 20px;
-    border-radius: 4px;
+    padding: 1rem;
+    border-radius: 5px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    /* font-size: 16px; */
+    height: 2.5rem;
+    /* margin: 4px 2px; */
+    margin-top: 2.5rem;
     cursor: pointer;
   }
   

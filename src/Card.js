@@ -39,6 +39,7 @@ export default function Card() {
               id="number"
               type="tel"
               name="number"
+              maxlength="16"
               //   placeholder="Card Number"
               value={number}
               onChange={(e) => setNumber(e.target.value)}
@@ -64,18 +65,20 @@ export default function Card() {
                 id="expiry"
                 type="text"
                 name="expiry"
+                maxlength="4"
                 //   placeholder="MM/YY"
                 value={expiry}
                 onChange={(e) => setExpiry(e.target.value)}
                 onFocus={(e) => setFoucs(e.target.name)}
               />
             </div>
-            <div>
+            <div style={{ paddingLeft: "2rem" }}>
               <label for="expiry">CVV</label>
               <input
                 id="cvc"
                 type="text"
                 name="cvc"
+                maxlength="3"
                 //   placeholder="CVC"
                 value={cvc}
                 onChange={(e) => setCVC(e.target.value)}
