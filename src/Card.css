@@ -1,20 +1,44 @@
+.cardLayout{
+    padding: 5rem 0;
+    /* border: 3px solid green; */
+    text-align: center;
+}
+
 .formPayment{
     border : 2px solid white;
     background-color: white;
+    width: 30%;
+    margin: 0 auto;
+    margin-top: -6rem;
+    /* width:45rem; */
+    height: 25rem;
     display: flex;
     justify-content: center;
     flex-direction: row;
-    border-radius: 10%;
+    border-radius: 2%;
+    box-shadow: 1px 1px 4px 10px #A8C8E9;
 }
 
 form {
     background-color: #fff;
     padding: 10px;
+    padding-top: 7rem;
 }
 
 input, label {
     display:block;
 }
+
+label {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    padding: 4px;
+    text-align:left;
+    /* text-transform: uppercase; */
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: xx-small;
+  }
 
 input {
     padding: .375 rem .75rem;

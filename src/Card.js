@@ -23,7 +23,7 @@ export default function Card() {
   //   };
 
   return (
-    <div id="PaymentForm">
+    <div className="cardLayout">
       <Cards
         cvc={cvc}
         expiry={expiry}
