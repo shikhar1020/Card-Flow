@@ -57,27 +57,31 @@ export default function Card() {
               onFocus={(e) => setFoucs(e.target.name)}
             />
           </div>
-          <div>
-            <label for="expiry">Expiration Date</label>
-            <input
-              id="expiry"
-              type="text"
-              name="expiry"
-              //   placeholder="MM/YY"
-              value={expiry}
-              onChange={(e) => setExpiry(e.target.value)}
-              onFocus={(e) => setFoucs(e.target.name)}
-            />
-            <label for="expiry">CVV</label>
-            <input
-              id="cvc"
-              type="text"
-              name="cvc"
-              //   placeholder="CVC"
-              value={cvc}
-              onChange={(e) => setCVC(e.target.value)}
-              onFocus={(e) => setFoucs(e.target.name)}
-            />
+          <div className="lastRow">
+            <div>
+              <label for="expiry">Expiration Date</label>
+              <input
+                id="expiry"
+                type="text"
+                name="expiry"
+                //   placeholder="MM/YY"
+                value={expiry}
+                onChange={(e) => setExpiry(e.target.value)}
+                onFocus={(e) => setFoucs(e.target.name)}
+              />
+            </div>
+            <div>
+              <label for="expiry">CVV</label>
+              <input
+                id="cvc"
+                type="text"
+                name="cvc"
+                //   placeholder="CVC"
+                value={cvc}
+                onChange={(e) => setCVC(e.target.value)}
+                onFocus={(e) => setFoucs(e.target.name)}
+              />
+            </div>
           </div>
           <input type="submit" value="Submit" />
         </form>

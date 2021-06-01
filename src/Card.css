@@ -1,5 +1,5 @@
 .cardLayout{
-    padding: 5rem 0;
+    padding: 3.5rem 0;
     /* border: 3px solid green; */
     text-align: center;
 }
@@ -11,7 +11,7 @@
     margin: 0 auto;
     margin-top: -6rem;
     /* width:45rem; */
-    height: 25rem;
+    height: 28rem;
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -21,8 +21,15 @@
 
 form {
     background-color: #fff;
+    width: 100%;
     padding: 10px;
     padding-top: 7rem;
+}
+
+.lastRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 input, label {
@@ -33,6 +40,7 @@ label {
     background-color: white;
     color: black;
     font-weight: bold;
+    margin-top:.5rem;
     padding: 4px;
     text-align:left;
     /* text-transform: uppercase; */
@@ -43,7 +51,8 @@ label {
 input {
     padding: .375 rem .75rem;
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 2;
+    width: 100%;
     color: #495057;
     border: none;
     background-color: #fff; 
@@ -60,15 +69,18 @@ input:focus {
   }
 
   input[type=submit] {
-    background-color: #0228B9;
+    background-color: #008CBA;
     border: none;
-    width: 100%;
     color: white;
-    padding: 16px 32px;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
     text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
   }
-
+  
 
 
