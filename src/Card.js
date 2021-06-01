@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Cards from "react-credit-cards";
 import CreditCardInput from "react-credit-card-input";
-import "react-credit-cards/es/styles-compiled.css";
+// import "react-credit-cards/es/styles-compiled.css";
+import "react-credit-cards/lib/styles.scss";
 
-import "./Card.css";
+import "./Card.scss";
 
 export default function Card() {
   const [cvc, setCVC] = useState("");
