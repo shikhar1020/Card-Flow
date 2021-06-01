@@ -1,9 +1,10 @@
 import "./App.css";
+import Card from "./Card";
 
 function App() {
   return (
     <div className="appPage">
-      <h1>Credit Card</h1>
+      <Card />
     </div>
   );
 }
