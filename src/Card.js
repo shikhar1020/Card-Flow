@@ -12,6 +12,10 @@ export default function Card() {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
 
+  //   Card Porops
+  const namePlaceholder = { name: "Card Holder" };
+  const expiryPlaceholder = { valid: "Expires" };
+
   //   const handleInputFocus = (e) => {
   //     this.setState({ focus: e.target.name });
   //   };
@@ -30,6 +34,8 @@ export default function Card() {
         focused={focus}
         name={name}
         number={number}
+        placeholders={namePlaceholder}
+        locale={expiryPlaceholder}
       />
       <div className="formPayment">
         <form>

@@ -1,7 +1,8 @@
 .cardLayout{
     padding: 3.5rem 0;
+    /* height:100%; */
     background-color: #C2E1F7;
-    /* border: 3px solid green; */
+    border: 3px solid #008CBA;
     text-align: center;
 }
 
