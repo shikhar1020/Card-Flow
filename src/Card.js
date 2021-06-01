@@ -1,67 +1,87 @@
-import React from "react";
+import React, { useState } from "react";
 import Cards from "react-credit-cards";
+import CreditCardInput from "react-credit-card-input";
 import "react-credit-cards/es/styles-compiled.css";
 
-export default class PaymentForm extends React.Component {
-  state = {
-    cvc: "",
-    expiry: "",
-    focus: "",
-    name: "",
-    number: "",
-  };
+import "./Card.css";
 
-  handleInputFocus = (e) => {
-    this.setState({ focus: e.target.name });
-  };
+export default function Card() {
+  const [cvc, setCVC] = useState("");
+  const [expiry, setExpiry] = useState("");
+  const [focus, setFoucs] = useState("");
+  const [name, setName] = useState("");
+  const [number, setNumber] = useState("");
 
-  handleInputChange = (e) => {
-    const { name, value } = e.target;
+  //   const handleInputFocus = (e) => {
+  //     this.setState({ focus: e.target.name });
+  //   };
 
-    this.setState({ [name]: value });
-  };
+  //   const handleInputChange = (e) => {
+  //     const { name, value } = e.target;
 
-  render() {
-    return (
-      <div id="PaymentForm">
-        <Cards
-          cvc={this.state.cvc}
-          expiry={this.state.expiry}
-          focused={this.state.focus}
-          name={this.state.name}
-          number={this.state.number}
-        />
+  //     this.setState({ [name]: value });
+  //   };
+
+  return (
+    <div id="PaymentForm">
+      <Cards
+        cvc={cvc}
+        expiry={expiry}
+        focused={focus}
+        name={name}
+        number={number}
+      />
+      <div className="formPayment">
         <form>
-          <input
-            type="tel"
-            name="number"
-            placeholder="Card Number"
-            onChange={this.handleInputChange}
-            onFocus={this.handleInputFocus}
-          />
-          <input
-            type="input"
-            name="name"
-            placeholder="Name"
-            onChange={this.handleInputChange}
-            onFocus={this.handleInputFocus}
-          />
-          <input
-            type="input"
-            name="expiry"
-            placeholder="Expiry"
-            onChange={this.handleInputChange}
-            onFocus={this.handleInputFocus}
-          />
-          <input
-            type="input"
-            name="cvc"
-            placeholder="CVC"
-            onChange={this.handleInputChange}
-            onFocus={this.handleInputFocus}
-          />
+          <div>
+            <label for="number">Card Number</label>
+            <input
+              id="number"
+              type="tel"
+              name="number"
+              //   placeholder="Card Number"
+              value={number}
+              onChange={(e) => setNumber(e.target.value)}
+              onFocus={(e) => setFoucs(e.target.name)}
+            />
+          </div>
+          <div>
+            <label for="name">Card Name</label>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              //   placeholder="Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              onFocus={(e) => setFoucs(e.target.name)}
+            />
+          </div>
+          <div>
+            <label for="expiry">Expiration Date</label>
+            <input
+              id="expiry"
+              type="text"
+              name="expiry"
+              //   placeholder="MM/YY"
+              value={expiry}
+              onChange={(e) => setExpiry(e.target.value)}
+              onFocus={(e) => setFoucs(e.target.name)}
+            />
+            <label for="expiry">CVV</label>
+            <input
+              id="cvc"
+              type="text"
+              name="cvc"
+              //   placeholder="CVC"
+              value={cvc}
+              onChange={(e) => setCVC(e.target.value)}
+              onFocus={(e) => setFoucs(e.target.name)}
+            />
+          </div>
+          <input type="submit" value="Submit" />
         </form>
       </div>
-    );
-  }
+    </div>
+  );
 }
