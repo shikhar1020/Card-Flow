@@ -12,6 +12,7 @@ export default function Card() {
   const [focus, setFoucs] = useState("");
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
+  const [prev, setPrev] = useState(0);
 
   //   Card Porops
   const namePlaceholder = { name: "Card Holder" };
@@ -21,11 +22,33 @@ export default function Card() {
   //     this.setState({ focus: e.target.name });
   //   };
 
-  //   const handleInputChange = (e) => {
-  //     const { name, value } = e.target;
+  const handleInputChange = (e) => {
+    var val = e.target.value;
+    const valArray = val.split(" ").join("").split("");
+    var valSpace = val.split("");
 
-  //     this.setState({ [name]: value });
-  //   };
+    // to work with backspace
+    if (valSpace[valSpace.length - 1] == " ") {
+      var valSpaceN = valSpace.slice(0, -2);
+      val = valSpaceN.join("");
+      setNumber(val);
+      // this.setState({ number: val });
+      return;
+    }
+
+    if (isNaN(valArray.join(""))) return;
+    if (valArray.length === 17) return;
+    if (valArray.length % 4 === 0 && valArray.length <= 15) {
+      setNumber(e.target.value + "  ");
+      // this.setState({ number: e.target.value + "  " });
+    } else {
+      setNumber(e.target.value);
+      // this.setState({ number: e.target.value });
+    }
+    // setNumber(cardNumberInput.replace(/\W/gi, "").replace(/(.{4})/g, "$1 "));
+    // const { name, value } = e.target;
+    // this.setState({ [name]: value });
+  };
 
   return (
     <div className="cardLayout">
@@ -46,10 +69,11 @@ export default function Card() {
               id="number"
               type="tel"
               name="number"
-              maxlength="16"
+              // maxlength="19"
               //   placeholder="Card Number"
               value={number}
-              onChange={(e) => setNumber(e.target.value)}
+              // onChange={(e) => setNumber(e.target.value)}
+              onChange={(e) => handleInputChange(e)}
               onFocus={(e) => setFoucs(e.target.name)}
             />
           </div>
@@ -66,7 +90,7 @@ export default function Card() {
             />
           </div>
           <div className="lastRow">
-            <div>
+            <div className="lastRowExpiry">
               <label for="expiry">Expiration Date</label>
               <input
                 id="expiry"
@@ -79,13 +103,13 @@ export default function Card() {
                 onFocus={(e) => setFoucs(e.target.name)}
               />
             </div>
-            <div style={{ paddingLeft: "2rem" }}>
+            <div className="lastRowCVV">
               <label for="expiry">CVV</label>
               <input
                 id="cvc"
                 type="text"
                 name="cvc"
-                maxlength="3"
+                maxlength="4"
                 //   placeholder="CVC"
                 value={cvc}
                 onChange={(e) => setCVC(e.target.value)}
