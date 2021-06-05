@@ -1,0 +1,218 @@
+diff --git a/node_modules/react-credit-cards/es/index.js b/node_modules/react-credit-cards/es/index.js
+index 353107a..e586902 100644
+--- a/node_modules/react-credit-cards/es/index.js
++++ b/node_modules/react-credit-cards/es/index.js
+@@ -28,7 +28,7 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
+ 
+ function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+ 
+-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
++function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () { })); return true; } catch (e) { return false; } }
+ 
+ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+ 
+@@ -59,9 +59,9 @@ var ReactCreditCards = /*#__PURE__*/function (_React$Component) {
+     key: "componentDidUpdate",
+     value: function componentDidUpdate(prevProps) {
+       var _this$props = this.props,
+-          acceptedCards = _this$props.acceptedCards,
+-          callback = _this$props.callback,
+-          number = _this$props.number;
++        acceptedCards = _this$props.acceptedCards,
++        callback = _this$props.callback,
++        number = _this$props.number;
+ 
+       if (prevProps.number !== number) {
+         /* istanbul ignore else */
+@@ -96,13 +96,13 @@ var ReactCreditCards = /*#__PURE__*/function (_React$Component) {
+     key: "render",
+     value: function render() {
+       var _this$props2 = this.props,
+-          cvc = _this$props2.cvc,
+-          focused = _this$props2.focused,
+-          locale = _this$props2.locale,
+-          name = _this$props2.name,
+-          placeholders = _this$props2.placeholders;
++        cvc = _this$props2.cvc,
++        focused = _this$props2.focused,
++        locale = _this$props2.locale,
++        name = _this$props2.name,
++        placeholders = _this$props2.placeholders;
+       var number = this.number,
+-          expiry = this.expiry;
++        expiry = this.expiry;
+       return /*#__PURE__*/React.createElement("div", {
+         key: "Cards",
+         className: "rccs"
+@@ -146,16 +146,16 @@ var ReactCreditCards = /*#__PURE__*/function (_React$Component) {
+     key: "issuer",
+     get: function get() {
+       var _this$props3 = this.props,
+-          issuer = _this$props3.issuer,
+-          preview = _this$props3.preview;
++        issuer = _this$props3.issuer,
++        preview = _this$props3.preview;
+       return preview && issuer ? issuer.toLowerCase() : this.options.issuer;
+     }
+   }, {
+     key: "number",
+     get: function get() {
+       var _this$props4 = this.props,
+-          number = _this$props4.number,
+-          preview = _this$props4.preview;
++        number = _this$props4.number,
++        preview = _this$props4.preview;
+       var maxLength = preview ? 19 : this.options.maxLength;
+       var nextNumber = typeof number === 'number' ? number.toString() : number.replace(/[A-Za-z]| /g, '');
+ 
+@@ -172,7 +172,7 @@ var ReactCreditCards = /*#__PURE__*/function (_React$Component) {
+       }
+ 
+       while (nextNumber.length < maxLength) {
+-        nextNumber += '•';
++        nextNumber += '#';
+       }
+ 
+       if (['amex', 'dinersclub'].indexOf(this.issuer) !== -1) {
+@@ -196,7 +196,7 @@ var ReactCreditCards = /*#__PURE__*/function (_React$Component) {
+     key: "expiry",
+     get: function get() {
+       var _this$props$expiry = this.props.expiry,
+-          expiry = _this$props$expiry === void 0 ? '' : _this$props$expiry;
++        expiry = _this$props$expiry === void 0 ? '' : _this$props$expiry;
+       var date = typeof expiry === 'number' ? expiry.toString() : expiry;
+       var month = '';
+       var year = '';
+diff --git a/node_modules/react-credit-cards/es/styles.scss b/node_modules/react-credit-cards/es/styles.scss
+index 630b199..dab2ddd 100644
+--- a/node_modules/react-credit-cards/es/styles.scss
++++ b/node_modules/react-credit-cards/es/styles.scss
+@@ -19,6 +19,8 @@ $rccs-dark-text-color: #555 !default;
+ $rccs-stripe-bg-color: #2a1d16 !default;
+ $rccs-signature-background: repeating-linear-gradient(0.1deg, #fff 20%, #fff 40%, #fea 40%, #fea 44%, #fff 44%) !default;
+ 
++
++// $rccs-default-background:;
+ $rccs-default-background: linear-gradient(25deg, #939393, #717171) !default;
+ $rccs-unknown-background: linear-gradient(25deg, #999, #999) !default;
+ $rccs-background-transition: all 0.5s ease-out !default;
+diff --git a/node_modules/react-credit-cards/lib/index.js b/node_modules/react-credit-cards/lib/index.js
+index d28fc51..b711184 100644
+--- a/node_modules/react-credit-cards/lib/index.js
++++ b/node_modules/react-credit-cards/lib/index.js
+@@ -41,7 +41,7 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
+ 
+ function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+ 
+-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
++function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () { })); return true; } catch (e) { return false; } }
+ 
+ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+ 
+@@ -68,9 +68,9 @@ var ReactCreditCards = /*#__PURE__*/function (_React$Component) {
+     key: "componentDidUpdate",
+     value: function componentDidUpdate(prevProps) {
+       var _this$props = this.props,
+-          acceptedCards = _this$props.acceptedCards,
+-          callback = _this$props.callback,
+-          number = _this$props.number;
++        acceptedCards = _this$props.acceptedCards,
++        callback = _this$props.callback,
++        number = _this$props.number;
+ 
+       if (prevProps.number !== number) {
+         /* istanbul ignore else */
+@@ -105,13 +105,13 @@ var ReactCreditCards = /*#__PURE__*/function (_React$Component) {
+     key: "render",
+     value: function render() {
+       var _this$props2 = this.props,
+-          cvc = _this$props2.cvc,
+-          focused = _this$props2.focused,
+-          locale = _this$props2.locale,
+-          name = _this$props2.name,
+-          placeholders = _this$props2.placeholders;
++        cvc = _this$props2.cvc,
++        focused = _this$props2.focused,
++        locale = _this$props2.locale,
++        name = _this$props2.name,
++        placeholders = _this$props2.placeholders;
+       var number = this.number,
+-          expiry = this.expiry;
++        expiry = this.expiry;
+       return /*#__PURE__*/_react.default.createElement("div", {
+         key: "Cards",
+         className: "rccs"
+@@ -126,7 +126,7 @@ var ReactCreditCards = /*#__PURE__*/function (_React$Component) {
+       }), /*#__PURE__*/_react.default.createElement("div", {
+         className: ['rccs__cvc__front', focused === 'cvc' ? 'rccs--focused' : ''].join(' ').trim()
+       }, cvc), /*#__PURE__*/_react.default.createElement("div", {
+-        className: ['rccs__number', number.replace(/ /g, '').length > 16 ? 'rccs__number--large' : '', focused === 'number' ? 'rccs--focused' : '', number.substr(0, 1) !== '•' ? 'rccs--filled' : ''].join(' ').trim()
++        className: ['rccs__number', number.replace(/ /g, '#').length > 16 ? 'rccs__number--large' : '', focused === 'number' ? 'rccs--focused' : '', number.substr(0, 1) !== '#' ? 'rccs--filled' : ''].join(' ').trim()
+       }, number), /*#__PURE__*/_react.default.createElement("div", {
+         className: ['rccs__name', focused === 'name' ? 'rccs--focused' : '', name ? 'rccs--filled' : ''].join(' ').trim()
+       }, name || placeholders.name), /*#__PURE__*/_react.default.createElement("div", {
+@@ -155,16 +155,16 @@ var ReactCreditCards = /*#__PURE__*/function (_React$Component) {
+     key: "issuer",
+     get: function get() {
+       var _this$props3 = this.props,
+-          issuer = _this$props3.issuer,
+-          preview = _this$props3.preview;
++        issuer = _this$props3.issuer,
++        preview = _this$props3.preview;
+       return preview && issuer ? issuer.toLowerCase() : this.options.issuer;
+     }
+   }, {
+     key: "number",
+     get: function get() {
+       var _this$props4 = this.props,
+-          number = _this$props4.number,
+-          preview = _this$props4.preview;
++        number = _this$props4.number,
++        preview = _this$props4.preview;
+       var maxLength = preview ? 19 : this.options.maxLength;
+       var nextNumber = typeof number === 'number' ? number.toString() : number.replace(/[A-Za-z]| /g, '');
+ 
+@@ -181,7 +181,7 @@ var ReactCreditCards = /*#__PURE__*/function (_React$Component) {
+       }
+ 
+       while (nextNumber.length < maxLength) {
+-        nextNumber += '•';
++        nextNumber += '#';
+       }
+ 
+       if (['amex', 'dinersclub'].indexOf(this.issuer) !== -1) {
+@@ -205,7 +205,7 @@ var ReactCreditCards = /*#__PURE__*/function (_React$Component) {
+     key: "expiry",
+     get: function get() {
+       var _this$props$expiry = this.props.expiry,
+-          expiry = _this$props$expiry === void 0 ? '' : _this$props$expiry;
++        expiry = _this$props$expiry === void 0 ? '' : _this$props$expiry;
+       var date = typeof expiry === 'number' ? expiry.toString() : expiry;
+       var month = '';
+       var year = '';
+diff --git a/node_modules/react-credit-cards/lib/styles.scss b/node_modules/react-credit-cards/lib/styles.scss
+index 630b199..ceeeaed 100644
+--- a/node_modules/react-credit-cards/lib/styles.scss
++++ b/node_modules/react-credit-cards/lib/styles.scss
+@@ -355,7 +355,7 @@ $rccs-visaelectron-logo: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBl
+   }
+ 
+   &__chip {
+-    background-image: url($rccs-chip-image);
++    // background-image: url($rccs-chip-image);
+     background-repeat: no-repeat;
+     background-size: contain;
+     height: $rccs-size / 11;
+diff --git a/node_modules/react-credit-cards/src/index.js b/node_modules/react-credit-cards/src/index.js
+index ba6ff4a..2358037 100644
+--- a/node_modules/react-credit-cards/src/index.js
++++ b/node_modules/react-credit-cards/src/index.js
+@@ -87,7 +87,7 @@ class ReactCreditCards extends React.Component {
+     }
+ 
+     while (nextNumber.length < maxLength) {
+-      nextNumber += '•';
++      nextNumber += '#';
+     }
+ 
+     if (['amex', 'dinersclub'].includes(this.issuer)) {

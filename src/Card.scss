@@ -31,6 +31,10 @@
     padding-top: 15px;
 }
 
+.rccs__number  .rccs--focused .rccs--filled{
+    content: "#### #### #### ####"
+}
+
 .rccs__name::before{
     content: "Card Holder";
     color: white;
@@ -69,8 +73,8 @@
 
 ////////////next tow classes for card number
 // .rccs__number{
-//     content:'#### #### #### ####';
-//     // visibility: hidden;
+//     // content:'#### #### #### ####';
+//     visibility: hidden;
 // }
 
 // .rccs__number:before{
