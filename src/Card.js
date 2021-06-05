@@ -143,7 +143,7 @@ export default function Card() {
                       value="MM"
                       disabled
                       selected
-                      label="✓ Month"
+                      label="Month" //✓
                     />
                     <option className="option" value="01">
                       01
@@ -201,7 +201,7 @@ export default function Card() {
                       value="YY"
                       disabled
                       selected
-                      label="✓ Year"
+                      label="Year" //✓
                     />
                     <option className="option" value="21">
                       2021
@@ -262,7 +262,6 @@ export default function Card() {
               />
             </div>
           </div>
-
           <input type="submit" value="Submit" />
         </form>
       </div>
