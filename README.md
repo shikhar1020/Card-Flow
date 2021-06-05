@@ -4,6 +4,10 @@
 ![Assignment](https://user-images.githubusercontent.com/54438024/120368686-fbc80100-c32f-11eb-89e5-51d1af7e49d5.gif)
 
 ## Current UI
+Update 2
+![image](https://user-images.githubusercontent.com/54438024/120890160-8e152100-c61e-11eb-94af-cc7eaa72b72d.png)
+
+Update 1
 ![image](https://user-images.githubusercontent.com/54438024/120368803-231ece00-c330-11eb-91ba-9df555640518.png)
 
 
