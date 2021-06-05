@@ -269,3 +269,7 @@ export default function Card() {
     </div>
   );
 }
+
+// Edit Node Module
+// https://stackoverflow.com/questions/13300137/how-to-edit-a-node-module-installed-via-npm#:~:text=You%20can%20use%20patch%2Dpackage,you%20just%20made%20changes%20to.
+// npx patch-package <package name>

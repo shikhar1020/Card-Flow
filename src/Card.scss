@@ -31,9 +31,9 @@
     padding-top: 15px;
 }
 
-.rccs__number  .rccs--focused .rccs--filled{
-    content: "#### #### #### ####"
-}
+// .rccs__number  .rccs--focused .rccs--filled{
+//     content: "#### #### #### ####"
+// }
 
 .rccs__name::before{
     content: "Card Holder";
@@ -59,6 +59,18 @@
     font-weight: bolder;
     color: white;
     // font-family: ;
+}
+
+// .rcss__number{
+//     top:35%;
+// }
+
+// .rcss--focused,
+.rcss__number
+.rcss--focused{
+    border: 2px solid white;
+    border-radius: 4px;
+    padding: 2px;
 }
 
 // .rccs__expiry__value:after{

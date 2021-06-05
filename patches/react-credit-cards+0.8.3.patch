@@ -191,9 +191,18 @@ index d28fc51..b711184 100644
        var month = '';
        var year = '';
 diff --git a/node_modules/react-credit-cards/lib/styles.scss b/node_modules/react-credit-cards/lib/styles.scss
-index 630b199..ceeeaed 100644
+index 630b199..54324e7 100644
 --- a/node_modules/react-credit-cards/lib/styles.scss
 +++ b/node_modules/react-credit-cards/lib/styles.scss
+@@ -303,7 +303,7 @@ $rccs-visaelectron-logo: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBl
+     font-size: $rccs-number-font-size;
+     left: 10%;
+     position: absolute;
+-    top: 45%;
++    top: 40%;
+ 
+     &.rccs__number--large {
+       font-size: $rccs-number-font-size * 0.85;
 @@ -355,7 +355,7 @@ $rccs-visaelectron-logo: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBl
    }
  
@@ -203,6 +212,24 @@ index 630b199..ceeeaed 100644
      background-repeat: no-repeat;
      background-size: contain;
      height: $rccs-size / 11;
+@@ -421,5 +421,16 @@ $rccs-visaelectron-logo: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBl
+   &--focused {
+     font-weight: 700;
+     opacity: 1 !important;
+-  }
++    }
++
++
++    
++    // &--focused{ 
++    //   &__number{ 
++    //   border: 2px solid white;
++    //   border-radius: 4px;
++    //   padding: 2px;
++    // }
++  // }
++
+ }
 diff --git a/node_modules/react-credit-cards/src/index.js b/node_modules/react-credit-cards/src/index.js
 index ba6ff4a..2358037 100644
 --- a/node_modules/react-credit-cards/src/index.js
