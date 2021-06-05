@@ -1,15 +1,12 @@
-# Credit Card Assignment
+# Card Flow: Credit Card Assignment
+To view the live demo visit [Card Flow](https://card-flow.web.app/)🚀 built with [React Js](https://reactjs.org/) and deployed on [Firebase](https://firebase.google.com/). 
+
+## Current UI 🎨
+_*Note: Expiry Date Dropdown in the below GIF cannot be recorder in the below because of some technical issue._
+![CardFlow1](https://user-images.githubusercontent.com/54438024/120890612-9753bd00-c621-11eb-9aa9-62e46f684c71.gif)
 
 ## Expected UI
 ![Assignment](https://user-images.githubusercontent.com/54438024/120368686-fbc80100-c32f-11eb-89e5-51d1af7e49d5.gif)
-
-## Current UI
-Update 2
-![image](https://user-images.githubusercontent.com/54438024/120890160-8e152100-c61e-11eb-94af-cc7eaa72b72d.png)
-
-Update 1
-![image](https://user-images.githubusercontent.com/54438024/120368803-231ece00-c330-11eb-91ba-9df555640518.png)
-
 
 
 ## Run in Local
